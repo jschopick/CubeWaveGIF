@@ -6,7 +6,7 @@ class App extends Component {
     let angle = 0;
     let w = 24;
     let ma; // Magic angle for rotation
-    let maxD; // Max distance
+    let maxD; // Max distance for offset
   
     prop.setup = function () {
       prop.createCanvas(400, 400, prop.WEBGL);
@@ -20,8 +20,8 @@ class App extends Component {
       prop.directionalLight(255, 255, 255, 1, 0, 0);
       
       // Change the angle to create a square diamond
-      prop.rotateX(-prop.QUARTER_PI);
-      prop.rotateY(ma);
+      prop.rotateX(-ma);
+      prop.rotateY(prop.QUARTER_PI);
 
       for(let z = 0; z < prop.height; z += w) {
         for(let x = 0; x < prop.width; x += w) {
