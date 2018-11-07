@@ -30,11 +30,11 @@ class App extends Component {
           let offset = prop.map(d, 0, maxD, -prop.PI, prop.PI);
           let a = angle + offset;
           // Sets height range for the cube.
-          let h = prop.floor(prop.map(prop.sin(a), -1, 1, 100, 300));
+          let h = prop.floor(prop.map(prop.sin(a), -1, 1, 100, 400));
           prop.normalMaterial();
           // prop.rect(x - prop.width / 2 + w / 2, 0, w - 2, h);
           prop.translate(x - prop.width / 2, 0, z - prop.height / 2);
-          prop.box(w - 2, h, w - 2);
+          prop.box(w, h, w);
           prop.pop();
         }
       }
